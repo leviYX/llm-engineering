@@ -6,6 +6,11 @@ from Website import Website
 openai = OpenAiUtil.buildOpenAiClient()
 
 # 定义prompt
+"""
+prompt有多个角色类型：
+system：表示你对llm设定的一个背景要求，他下文的一切都是基于这个要求前提来回答
+user：表示你和llm交互的问题
+"""
 system_prompt = "你是一个分析网站内容并提供简短摘要的助手，并且你在总结的时候会忽略可能与导航相关的文本。"
 def user_prompt_for(website):
    return f"你正在查看一个名为“{website.title}”的网站。该网站的内容如下{website.text}，请提供这个网站的简短摘要，使用 Markdown 格式。如果包含新闻或公告，请一并总结。"
