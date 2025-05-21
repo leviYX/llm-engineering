@@ -28,5 +28,5 @@ def display_summary(url):
     summary = summarize(url)
     display(summary)
 
-# call
-display_summary("http://stats.customs.gov.cn/")
+# call 我们来爬取一个java nio的网址
+display_summary("https://jenkov.com/tutorials/java-nio/index.html")
